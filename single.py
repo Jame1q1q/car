@@ -19,7 +19,7 @@ transmission_type = st.slider('Enter the transmission type:', 0, 100, 25)
 predict_clicked=st.button("Get the prediction")
 
 if predict_clicked==True:
-    model=pickle.load(open("CAR PRICE DATASET/Model Development/RFR.pkl", 'rb'))
+    model=pickle.load(open("dataset/model_development/RFR.pkl", 'rb'))
     #load the test data into numpy array
     data=[np.array([vehicle_age,km_driven,mileage,engine,max_power,seats, seller_type, fuel_type, transmission_type])]
 
@@ -37,3 +37,4 @@ else:
 
     #display the predicted price on the webpage
     
+
